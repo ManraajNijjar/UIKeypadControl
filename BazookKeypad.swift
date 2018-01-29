@@ -51,9 +51,11 @@ class BazookKeypad: UIControl {
         didSet{
             
             oneButton.backgroundColor = UIColor.blue
+            twoButton.backgroundColor = UIColor.red
+            threeButton.backgroundColor = UIColor.green
             
-            stackViewRowOne = UIStackView(arrangedSubviews: [oneButton, twoButton, threeButton])
-            stackViewRowOne.axis = .horizontal
+            stackViewRowOne = stackViewSetup(views: [oneButton, twoButton, threeButton])
+            
             stackViewRowTwo = UIStackView(arrangedSubviews: [fourButton, fiveButton, sixButton])
             stackViewRowTwo.axis = .horizontal
             stackViewRowThree = UIStackView(arrangedSubviews: [sevenButton, eightButton, nineButton])
@@ -85,6 +87,17 @@ class BazookKeypad: UIControl {
             //addSubview(stackViewRowThree)
             
         }
+    }
+    
+    func stackViewSetup(views: [UIView]) -> UIStackView {
+        var stackViewForSetup = UIStackView()
+        stackViewForSetup = UIStackView(arrangedSubviews: views)
+        stackViewForSetup.axis = .horizontal
+        stackViewForSetup.distribution = .fillEqually
+        stackViewForSetup.spacing = (frame.width / 10)
+        
+        
+        return stackViewForSetup
     }
     
     
