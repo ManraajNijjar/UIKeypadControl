@@ -43,6 +43,8 @@ class BazookKeypad: UIControl {
     var stackViewRowFour: UIStackView = UIStackView()
     var stackViewRowFive: UIStackView = UIStackView()
     
+    var encompassingStackView: UIStackView = UIStackView()
+    
     @IBInspectable
     var buttonSize: CGFloat = 5;
     
@@ -65,12 +67,20 @@ class BazookKeypad: UIControl {
             stackViewRowFour = stackViewSetup(views: [UIButton(), zeroButton, deleteButton])
             stackViewRowFive = stackViewSetup(views: [submitButton])
             
-            arrangeStackViews(views: [stackViewRowOne, stackViewRowTwo, stackViewRowThree, stackViewRowFour, stackViewRowFive])
-            addSubview(stackViewRowOne)
+           // arrangeStackViews(views: [stackViewRowOne, stackViewRowTwo, stackViewRowThree, stackViewRowFour, stackViewRowFive])
+            /*addSubview(stackViewRowOne)
             addSubview(stackViewRowTwo)
             addSubview(stackViewRowThree)
             addSubview(stackViewRowFour)
-            addSubview(stackViewRowFive)
+            addSubview(stackViewRowFive)*/
+            
+            encompassingStackView = UIStackView(arrangedSubviews: [stackViewRowOne, stackViewRowTwo, stackViewRowThree, stackViewRowFour, stackViewRowFive])
+            encompassingStackView.axis = .vertical
+            encompassingStackView.distribution = .fillEqually
+            encompassingStackView.frame = frame
+            encompassingStackView.spacing = (frame.height * 0.05)
+            addSubview(encompassingStackView)
+            
             
         }
     }
