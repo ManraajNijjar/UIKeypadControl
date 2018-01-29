@@ -14,6 +14,7 @@
 		86715624201E7A1600F34817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86715623201E7A1600F34817 /* Assets.xcassets */; };
 		86715627201E7A1600F34817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86715625201E7A1600F34817 /* LaunchScreen.storyboard */; };
 		86715632201E7A1700F34817 /* BazookKeypadControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86715631201E7A1700F34817 /* BazookKeypadControlTests.swift */; };
+		8671563D201E80EA00F34817 /* BazookKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671563C201E80EA00F34817 /* BazookKeypad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		8671562D201E7A1700F34817 /* BazookKeypadControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BazookKeypadControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86715631201E7A1700F34817 /* BazookKeypadControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BazookKeypadControlTests.swift; sourceTree = "<group>"; };
 		86715633201E7A1700F34817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8671563C201E80EA00F34817 /* BazookKeypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BazookKeypad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		8671560D201E7A1600F34817 = {
 			isa = PBXGroup;
 			children = (
+				8671563C201E80EA00F34817 /* BazookKeypad.swift */,
 				86715618201E7A1600F34817 /* BazookKeypadControl */,
 				86715630201E7A1700F34817 /* BazookKeypadControlTests */,
 				86715617201E7A1600F34817 /* Products */,
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8671561C201E7A1600F34817 /* ViewController.swift in Sources */,
+				8671563D201E80EA00F34817 /* BazookKeypad.swift in Sources */,
 				86715622201E7A1600F34817 /* BazookKeypadControl.xcdatamodeld in Sources */,
 				8671561A201E7A1600F34817 /* AppDelegate.swift in Sources */,
 			);
