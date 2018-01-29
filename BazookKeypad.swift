@@ -56,30 +56,10 @@ class BazookKeypad: UIControl {
             
             stackViewRowOne = stackViewSetup(views: [oneButton, twoButton, threeButton])
             
-            stackViewRowTwo = UIStackView(arrangedSubviews: [fourButton, fiveButton, sixButton])
-            stackViewRowTwo.axis = .horizontal
-            stackViewRowThree = UIStackView(arrangedSubviews: [sevenButton, eightButton, nineButton])
-            stackViewRowThree.axis = .horizontal
-            stackViewRowFour = UIStackView(arrangedSubviews: [UIButton(), zeroButton, deleteButton])
-            stackViewRowFour.axis = .horizontal
-            stackViewRowFive = UIStackView(arrangedSubviews: [submitButton])
-            stackViewRowFive.axis = .horizontal
-            
-            
-            stackViewRowOne.frame.size = CGSize(width: frame.width, height: frame.height / 5)
-            stackViewRowTwo.frame.size = CGSize(width: frame.width, height: frame.height / 5)
-            stackViewRowThree.frame.size = CGSize(width: frame.width, height: frame.height / 5)
-            stackViewRowFour.frame.size = CGSize(width: frame.width, height: frame.height / 5)
-            stackViewRowFive.frame.size = CGSize(width: frame.width, height: frame.height / 5)
-            
-            //stackViewRowOne.frame.origin = CGPoint(x: 0, y: 0)
-            
-            //stackViewRowOne.addSubview(UISwitch())
-            //stackViewRowOne.addSubview(UISwitch())
-            //stackViewRowTwo.addSubview(UIStepper())
-            
-            stackViewRowOne.layer.borderWidth = 1
-            stackViewRowOne.layer.borderColor = CGColor(colorSpace: CGColorSpaceCreateDeviceRGB(), components: [1.0, 1, 1, 0])!
+            stackViewRowTwo = stackViewSetup(views: [fourButton, fiveButton, sixButton])
+            stackViewRowThree = stackViewSetup(views: [sevenButton, eightButton, nineButton])
+            stackViewRowFour = stackViewSetup(views: [UIButton(), zeroButton, deleteButton])
+            stackViewRowFive = stackViewSetup(views: [submitButton])
             
             
             addSubview(stackViewRowOne)
@@ -95,7 +75,7 @@ class BazookKeypad: UIControl {
         stackViewForSetup.axis = .horizontal
         stackViewForSetup.distribution = .fillEqually
         stackViewForSetup.spacing = (frame.width / 10)
-        
+        stackViewForSetup.frame.size = CGSize(width: frame.width, height: frame.height / 5)
         
         return stackViewForSetup
     }
