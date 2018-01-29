@@ -54,17 +54,23 @@ class BazookKeypad: UIControl {
             twoButton.backgroundColor = UIColor.red
             threeButton.backgroundColor = UIColor.green
             
-            stackViewRowOne = stackViewSetup(views: [oneButton, twoButton, threeButton])
+            fourButton.backgroundColor = UIColor.black
+            sevenButton.backgroundColor = UIColor.cyan
+            zeroButton.backgroundColor = UIColor.darkGray
+            submitButton.backgroundColor = UIColor.black
             
+            stackViewRowOne = stackViewSetup(views: [oneButton, twoButton, threeButton])
             stackViewRowTwo = stackViewSetup(views: [fourButton, fiveButton, sixButton])
             stackViewRowThree = stackViewSetup(views: [sevenButton, eightButton, nineButton])
             stackViewRowFour = stackViewSetup(views: [UIButton(), zeroButton, deleteButton])
             stackViewRowFive = stackViewSetup(views: [submitButton])
             
-            
+            arrangeStackViews(views: [stackViewRowOne, stackViewRowTwo, stackViewRowThree, stackViewRowFour, stackViewRowFive])
             addSubview(stackViewRowOne)
-            //addSubview(stackViewRowTwo)
-            //addSubview(stackViewRowThree)
+            addSubview(stackViewRowTwo)
+            addSubview(stackViewRowThree)
+            addSubview(stackViewRowFour)
+            addSubview(stackViewRowFive)
             
         }
     }
@@ -80,6 +86,12 @@ class BazookKeypad: UIControl {
         return stackViewForSetup
     }
     
+    func arrangeStackViews(views: [UIView]) {
+        views[1].frame.origin = CGPoint(x: 0, y: (frame.width / 5))
+        views[2].frame.origin = CGPoint(x: 0, y: (frame.width / 5) * 2)
+        views[3].frame.origin = CGPoint(x: 0, y: (frame.width / 5) * 3)
+        views[4].frame.origin = CGPoint(x: 0, y: (frame.width / 5) * 4)
+    }
     
     /*
     // Only override draw() if you perform custom drawing.
