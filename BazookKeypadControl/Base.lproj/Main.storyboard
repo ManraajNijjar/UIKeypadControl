@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4T-OL-JtN" customClass="BazookKeypad" customModule="BazookKeypadControl" customModuleProvider="target">
-                                <rect key="frame" x="67" y="205" width="240" height="256"/>
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="NO"/>

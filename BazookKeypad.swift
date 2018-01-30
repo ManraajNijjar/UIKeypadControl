@@ -74,12 +74,22 @@ class BazookKeypad: UIControl {
             addSubview(stackViewRowFour)
             addSubview(stackViewRowFive)*/
             
+            
             encompassingStackView = UIStackView(arrangedSubviews: [stackViewRowOne, stackViewRowTwo, stackViewRowThree, stackViewRowFour, stackViewRowFive])
             encompassingStackView.axis = .vertical
             encompassingStackView.distribution = .fillEqually
             encompassingStackView.frame = frame
+            encompassingStackView.frame.origin = CGPoint(x: 0, y: 0)
             encompassingStackView.spacing = (frame.height * 0.05)
             addSubview(encompassingStackView)
+            
+            /*
+            //oneButton.frame.size = CGSize(width: stackViewRowOne.frame.height, height: stackViewRowOne.frame.height)
+            oneButton.widthAnchor.constraint(equalToConstant: stackViewRowOne.frame.height).isActive = true
+            oneButton.heightAnchor.constraint(equalToConstant: stackViewRowOne.frame.height).isActive = true
+            oneButton.layer.cornerRadius = stackViewRowOne.frame.height / 2
+            
+            //oneButton.frame.size = CGSize(width: 50, height: 50) */
             
             
         }
