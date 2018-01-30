@@ -49,17 +49,27 @@ class BazookKeypad: UIControl {
     var buttonSize: CGFloat = 5;
     
     @IBInspectable
+    var buttonColor: UIColor = UIColor.orange
+    
+    @IBInspectable
     var active: Bool = false {
         didSet{
             
             oneButton = setupButton(buttonText: "1")
-            twoButton.backgroundColor = UIColor.red
-            threeButton.backgroundColor = UIColor.green
+            twoButton = setupButton(buttonText: "2")
+            threeButton = setupButton(buttonText: "3")
             
-            fourButton.backgroundColor = UIColor.black
-            sevenButton.backgroundColor = UIColor.cyan
-            zeroButton.backgroundColor = UIColor.darkGray
-            submitButton.backgroundColor = UIColor.black
+            fourButton = setupButton(buttonText: "4")
+            fiveButton = setupButton(buttonText: "5")
+            sixButton = setupButton(buttonText: "6")
+            
+            sevenButton = setupButton(buttonText: "7")
+            eightButton = setupButton(buttonText: "8")
+            nineButton = setupButton(buttonText: "9")
+            
+            zeroButton = setupButton(buttonText: "0")
+            deleteButton = setupButton(buttonText: "Delete")
+            submitButton = setupButton(buttonText: "Submit")
             
             stackViewRowOne = stackViewSetup(views: [oneButton, twoButton, threeButton])
             stackViewRowTwo = stackViewSetup(views: [fourButton, fiveButton, sixButton])
@@ -93,7 +103,7 @@ class BazookKeypad: UIControl {
         var buttonForSetup = UIButton()
         buttonForSetup.backgroundColor = UIColor.clear
         buttonForSetup.layer.masksToBounds = false
-        buttonForSetup.layer.shadowColor = UIColor.orange.cgColor
+        buttonForSetup.layer.shadowColor = buttonColor.cgColor
         buttonForSetup.layer.shadowOpacity = 0.5
         buttonForSetup.layer.shadowOffset = CGSize(width: 2, height: 2)
         buttonForSetup.layer.shadowRadius = 1
@@ -102,6 +112,7 @@ class BazookKeypad: UIControl {
         
         buttonForSetup.setTitle(buttonText, for: .normal)
         buttonForSetup.setTitleColor(UIColor.black, for: .normal)
+        buttonForSetup.titleLabel?.font =  UIFont(name: "Helvetica", size: 20)
         
         return buttonForSetup
     }
