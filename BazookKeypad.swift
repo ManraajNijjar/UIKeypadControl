@@ -128,11 +128,61 @@ class BazookKeypad: UIControl {
         return stackViewForSetup
     }
     
+    
+    @objc func oneTapped(button: UIButton){
+        
+    }
+    
+    @objc func twoTapped(button: UIButton){
+        
+    }
+    
+    @objc func threeTapped(button: UIButton){
+        
+    }
+    
+    @objc func fourTapped(button: UIButton){
+        
+    }
+    
+    @objc func fiveTapped(button: UIButton){
+        
+    }
+    
+    @objc func sixTapped(button: UIButton){
+        
+    }
+    
+    @objc func sevenTapped(button: UIButton){
+        
+    }
+    
+    @objc func eightTapped(button: UIButton){
+        
+    }
+    
+    @objc func nineTapped(button: UIButton){
+        
+    }
+    
+    @objc func zeroTapped(button: UIButton){
+        
+    }
+    
+    @objc func deleteTapped(button: UIButton){
+        
+    }
+    
+    @objc func submitTapped(button: UIButton){
+        
+    }
+    
+    /*
     func arrangeStackViews(views: [UIView]) {
         views[1].frame.origin = CGPoint(x: 0, y: (frame.width / 5))
         views[2].frame.origin = CGPoint(x: 0, y: (frame.width / 5) * 2)
         views[3].frame.origin = CGPoint(x: 0, y: (frame.width / 5) * 3)
         views[4].frame.origin = CGPoint(x: 0, y: (frame.width / 5) * 4)
-    }
+    } */
     
 }
