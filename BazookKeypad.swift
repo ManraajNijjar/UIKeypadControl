@@ -52,7 +52,7 @@ class BazookKeypad: UIControl {
     var active: Bool = false {
         didSet{
             
-            oneButton.backgroundColor = UIColor.blue
+            oneButton = setupButton(buttonText: "1")
             twoButton.backgroundColor = UIColor.red
             threeButton.backgroundColor = UIColor.green
             
@@ -91,7 +91,17 @@ class BazookKeypad: UIControl {
     
     func setupButton(buttonText: String) -> UIButton {
         var buttonForSetup = UIButton()
+        buttonForSetup.backgroundColor = UIColor.clear
+        buttonForSetup.layer.masksToBounds = false
+        buttonForSetup.layer.shadowColor = UIColor.orange.cgColor
+        buttonForSetup.layer.shadowOpacity = 0.5
+        buttonForSetup.layer.shadowOffset = CGSize(width: 2, height: 2)
+        buttonForSetup.layer.shadowRadius = 1
+        buttonForSetup.layer.borderWidth = 1
+        buttonForSetup.layer.borderColor = UIColor.orange.cgColor
         
+        buttonForSetup.setTitle(buttonText, for: .normal)
+        buttonForSetup.setTitleColor(UIColor.black, for: .normal)
         
         return buttonForSetup
     }
