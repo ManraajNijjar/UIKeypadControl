@@ -66,13 +66,7 @@ class BazookKeypad: UIControl {
             stackViewRowThree = stackViewSetup(views: [sevenButton, eightButton, nineButton])
             stackViewRowFour = stackViewSetup(views: [UIButton(), zeroButton, deleteButton])
             stackViewRowFive = stackViewSetup(views: [submitButton])
-            
-           // arrangeStackViews(views: [stackViewRowOne, stackViewRowTwo, stackViewRowThree, stackViewRowFour, stackViewRowFive])
-            /*addSubview(stackViewRowOne)
-            addSubview(stackViewRowTwo)
-            addSubview(stackViewRowThree)
-            addSubview(stackViewRowFour)
-            addSubview(stackViewRowFive)*/
+
             
             
             encompassingStackView = UIStackView(arrangedSubviews: [stackViewRowOne, stackViewRowTwo, stackViewRowThree, stackViewRowFour, stackViewRowFive])
@@ -95,6 +89,13 @@ class BazookKeypad: UIControl {
         }
     }
     
+    func setupButton(buttonText: String) -> UIButton {
+        var buttonForSetup = UIButton()
+        
+        
+        return buttonForSetup
+    }
+    
     func stackViewSetup(views: [UIView]) -> UIStackView {
         var stackViewForSetup = UIStackView()
         stackViewForSetup = UIStackView(arrangedSubviews: views)
@@ -113,12 +114,4 @@ class BazookKeypad: UIControl {
         views[4].frame.origin = CGPoint(x: 0, y: (frame.width / 5) * 4)
     }
     
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }
