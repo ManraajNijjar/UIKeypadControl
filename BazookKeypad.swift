@@ -36,6 +36,7 @@ class BazookKeypad: UIControl {
     var deleteButton: UIButton = UIButton()
     
     var submitButton: UIButton = UIButton()
+    var submitFunction : (()  -> Void)!
     
     var stackViewRowOne: UIStackView = UIStackView()
     var stackViewRowTwo: UIStackView = UIStackView()
@@ -100,7 +101,7 @@ class BazookKeypad: UIControl {
     }
     
     func setupButton(buttonText: String) -> UIButton {
-        var buttonForSetup = UIButton()
+        let buttonForSetup = UIButton()
         buttonForSetup.backgroundColor = UIColor.clear
         buttonForSetup.layer.masksToBounds = false
         buttonForSetup.layer.shadowColor = buttonColor.cgColor
@@ -130,51 +131,97 @@ class BazookKeypad: UIControl {
     
     
     @objc func oneTapped(button: UIButton){
+        if (associatedTextField != nil) {
+            associatedTextField.text = associatedTextField.text! + "1";
+        } else {
+            print("You must attach a text field to this function")
+        }
         
     }
     
     @objc func twoTapped(button: UIButton){
-        
+        if (associatedTextField != nil) {
+            associatedTextField.text = associatedTextField.text! + "2";
+        } else {
+            print("You must attach a text field to this function")
+        }
     }
     
     @objc func threeTapped(button: UIButton){
-        
+        if (associatedTextField != nil) {
+            associatedTextField.text = associatedTextField.text! + "3";
+        } else {
+            print("You must attach a text field to this function")
+        }
     }
     
     @objc func fourTapped(button: UIButton){
-        
+        if (associatedTextField != nil) {
+            associatedTextField.text = associatedTextField.text! + "4";
+        } else {
+            print("You must attach a text field to this function")
+        }
     }
     
     @objc func fiveTapped(button: UIButton){
-        
+        if (associatedTextField != nil) {
+            associatedTextField.text = associatedTextField.text! + "5";
+        } else {
+            print("You must attach a text field to this function")
+        }
     }
     
     @objc func sixTapped(button: UIButton){
-        
+        if (associatedTextField != nil) {
+            associatedTextField.text = associatedTextField.text! + "6";
+        } else {
+            print("You must attach a text field to this function")
+        }
     }
     
     @objc func sevenTapped(button: UIButton){
-        
+        if (associatedTextField != nil) {
+            associatedTextField.text = associatedTextField.text! + "7";
+        } else {
+            print("You must attach a text field to this function")
+        }
     }
     
     @objc func eightTapped(button: UIButton){
-        
+        if (associatedTextField != nil) {
+            associatedTextField.text = associatedTextField.text! + "8";
+        } else {
+            print("You must attach a text field to this function")
+        }
     }
     
     @objc func nineTapped(button: UIButton){
-        
+        if (associatedTextField != nil) {
+            associatedTextField.text = associatedTextField.text! + "9";
+        } else {
+            print("You must attach a text field to this function")
+        }
     }
     
     @objc func zeroTapped(button: UIButton){
-        
+        if (associatedTextField != nil) {
+            associatedTextField.text = associatedTextField.text! + "0";
+        } else {
+            print("You must attach a text field to this function")
+        }
     }
     
     @objc func deleteTapped(button: UIButton){
-        
+        if (associatedTextField != nil) {
+            let textString = associatedTextField.text!
+            associatedTextField.text = String(textString.dropLast())
+        } else {
+            print("You must attach a text field to this function")
+        }
     }
     
     @objc func submitTapped(button: UIButton){
-        
+        submitFunction()
     }
     
     /*
