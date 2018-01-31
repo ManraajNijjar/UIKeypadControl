@@ -102,6 +102,18 @@ class BazookKeypad: UIControl {
             deleteButton.addTarget(self, action: #selector(deleteTapped(button:)), for: .touchUpInside)
             submitButton.addTarget(self, action: #selector(submitTapped(button:)), for: .touchUpInside)
             
+            oneButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
+            twoButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
+            threeButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
+            fourButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
+            fiveButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
+            sixButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
+            sevenButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
+            eightButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
+            nineButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
+            zeroButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
+            deleteButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
+            
             /*
             //oneButton.frame.size = CGSize(width: stackViewRowOne.frame.height, height: stackViewRowOne.frame.height)
             oneButton.widthAnchor.constraint(equalToConstant: stackViewRowOne.frame.height).isActive = true
@@ -144,7 +156,16 @@ class BazookKeypad: UIControl {
     }
     
     
+    @objc func buttonPressed(button: UIButton) {
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.orange
+        }
+    }
+    
     @objc func oneTapped(button: UIButton){
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.clear
+        }
         if (associatedTextField != nil) {
             associatedTextField.text = associatedTextField.text! + "1";
         } else {
@@ -154,6 +175,9 @@ class BazookKeypad: UIControl {
     }
     
     @objc func twoTapped(button: UIButton){
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.clear
+        }
         if (associatedTextField != nil) {
             associatedTextField.text = associatedTextField.text! + "2";
         } else {
@@ -162,6 +186,9 @@ class BazookKeypad: UIControl {
     }
     
     @objc func threeTapped(button: UIButton){
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.clear
+        }
         if (associatedTextField != nil) {
             associatedTextField.text = associatedTextField.text! + "3";
         } else {
@@ -170,6 +197,9 @@ class BazookKeypad: UIControl {
     }
     
     @objc func fourTapped(button: UIButton){
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.clear
+        }
         if (associatedTextField != nil) {
             associatedTextField.text = associatedTextField.text! + "4";
         } else {
@@ -178,6 +208,9 @@ class BazookKeypad: UIControl {
     }
     
     @objc func fiveTapped(button: UIButton){
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.clear
+        }
         if (associatedTextField != nil) {
             associatedTextField.text = associatedTextField.text! + "5";
         } else {
@@ -186,6 +219,9 @@ class BazookKeypad: UIControl {
     }
     
     @objc func sixTapped(button: UIButton){
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.clear
+        }
         if (associatedTextField != nil) {
             associatedTextField.text = associatedTextField.text! + "6";
         } else {
@@ -194,6 +230,9 @@ class BazookKeypad: UIControl {
     }
     
     @objc func sevenTapped(button: UIButton){
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.clear
+        }
         if (associatedTextField != nil) {
             associatedTextField.text = associatedTextField.text! + "7";
         } else {
@@ -202,6 +241,9 @@ class BazookKeypad: UIControl {
     }
     
     @objc func eightTapped(button: UIButton){
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.clear
+        }
         if (associatedTextField != nil) {
             associatedTextField.text = associatedTextField.text! + "8";
         } else {
@@ -210,6 +252,9 @@ class BazookKeypad: UIControl {
     }
     
     @objc func nineTapped(button: UIButton){
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.clear
+        }
         if (associatedTextField != nil) {
             associatedTextField.text = associatedTextField.text! + "9";
         } else {
@@ -218,6 +263,9 @@ class BazookKeypad: UIControl {
     }
     
     @objc func zeroTapped(button: UIButton){
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.clear
+        }
         if (associatedTextField != nil) {
             associatedTextField.text = associatedTextField.text! + "0";
         } else {
@@ -226,6 +274,9 @@ class BazookKeypad: UIControl {
     }
     
     @objc func deleteTapped(button: UIButton){
+        UIView.animate(withDuration: 0.1) {
+            button.backgroundColor = UIColor.clear
+        }
         if (associatedTextField != nil) {
             let textString = associatedTextField.text!
             associatedTextField.text = String(textString.dropLast())
