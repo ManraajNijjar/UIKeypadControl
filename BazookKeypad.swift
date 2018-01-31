@@ -114,6 +114,8 @@ class BazookKeypad: UIControl {
             zeroButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
             deleteButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
             
+            
+            submitButton.setTitleColor(UIColor.red, for: .disabled)
             /*
             //oneButton.frame.size = CGSize(width: stackViewRowOne.frame.height, height: stackViewRowOne.frame.height)
             oneButton.widthAnchor.constraint(equalToConstant: stackViewRowOne.frame.height).isActive = true
@@ -153,6 +155,20 @@ class BazookKeypad: UIControl {
         stackViewForSetup.frame.size = CGSize(width: frame.width, height: frame.height / 5)
         
         return stackViewForSetup
+    }
+    
+    func enableSubmitButton(){
+        submitButton.isEnabled = true
+        UIView.animate(withDuration: 0.1) {
+            self.submitButton.backgroundColor = UIColor.clear
+        }
+    }
+    
+    func disableSubmitButton(){
+        submitButton.isEnabled = false
+        UIView.animate(withDuration: 0.1) {
+            self.submitButton.backgroundColor = UIColor.black
+        }
     }
     
     
