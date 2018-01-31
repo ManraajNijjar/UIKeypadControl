@@ -88,6 +88,20 @@ class BazookKeypad: UIControl {
             encompassingStackView.spacing = (frame.height * 0.05)
             addSubview(encompassingStackView)
             
+            
+            oneButton.addTarget(self, action: #selector(oneTapped(button:)), for: .touchUpInside)
+            twoButton.addTarget(self, action: #selector(twoTapped(button:)), for: .touchUpInside)
+            threeButton.addTarget(self, action: #selector(threeTapped(button:)), for: .touchUpInside)
+            fourButton.addTarget(self, action: #selector(fourTapped(button:)), for: .touchUpInside)
+            fiveButton.addTarget(self, action: #selector(fiveTapped(button:)), for: .touchUpInside)
+            sixButton.addTarget(self, action: #selector(sixTapped(button:)), for: .touchUpInside)
+            sevenButton.addTarget(self, action: #selector(sevenTapped(button:)), for: .touchUpInside)
+            eightButton.addTarget(self, action: #selector(eightTapped(button:)), for: .touchUpInside)
+            nineButton.addTarget(self, action: #selector(nineTapped(button:)), for: .touchUpInside)
+            zeroButton.addTarget(self, action: #selector(zeroTapped(button:)), for: .touchUpInside)
+            deleteButton.addTarget(self, action: #selector(deleteTapped(button:)), for: .touchUpInside)
+            submitButton.addTarget(self, action: #selector(submitTapped(button:)), for: .touchUpInside)
+            
             /*
             //oneButton.frame.size = CGSize(width: stackViewRowOne.frame.height, height: stackViewRowOne.frame.height)
             oneButton.widthAnchor.constraint(equalToConstant: stackViewRowOne.frame.height).isActive = true
