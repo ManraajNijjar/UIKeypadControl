@@ -35,6 +35,8 @@ class BazookKeypad: UIControl {
     
     var deleteButton: UIButton = UIButton()
     
+    
+    var submitButtonGradient = CAGradientLayer()
     var submitButton: UIButton = UIButton()
     var submitFunction : (()  -> Void)!
     
@@ -115,7 +117,16 @@ class BazookKeypad: UIControl {
             deleteButton.addTarget(self, action: #selector(buttonPressed(button:)), for: .touchDown)
             
             
+            submitButtonGradient.frame = bounds
+            submitButtonGradient.colors = [
+                UIColor.clear.cgColor,
+                UIColor.orange.cgColor
+            ]
+            submitButtonGradient.startPoint = CGPoint(x:0, y:0)
+            submitButtonGradient.endPoint = CGPoint(x:1, y:1)
+            submitButton.layer.addSublayer(submitButtonGradient)
             submitButton.setTitleColor(UIColor.red, for: .disabled)
+            
             /*
             //oneButton.frame.size = CGSize(width: stackViewRowOne.frame.height, height: stackViewRowOne.frame.height)
             oneButton.widthAnchor.constraint(equalToConstant: stackViewRowOne.frame.height).isActive = true
