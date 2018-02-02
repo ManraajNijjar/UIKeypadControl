@@ -9,9 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var keyPad: BazookKeypad!
+    
+    @IBOutlet var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        keyPad.associatedTextField = textField
         // Do any additional setup after loading the view, typically from a nib.
     }
 
